@@ -116,7 +116,6 @@ a {
 
 .restaurants-card img {
     width: 400px;
-    height: auto;
 }
 
 .restaurants-card h3 {
@@ -130,7 +129,6 @@ a {
     font-size: 20px;
     margin: 5px 0;
 }
-
 
 /* Restaurants Form PAGE */
 h1 {
