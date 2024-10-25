@@ -63,7 +63,8 @@ let lastId = restaurantData.length;
 const getNextId = () => {
     lastId += 1;
     return lastId;
-}
+};
+
 
 // Get a list of restaurants
 const getRestaurants = () => {
@@ -77,11 +78,17 @@ const getRestaurant = (id) => {
 };
 
 // Create a new restaurant entry
-const createRestaurant = (newRestaurant) => {
+const createRestaurant = (data) => {
+    console.log(data)
     const newRes = {
         id: getNextId(),
-        ...data
+        name: data.name,
+        address: data.add,
+        phone: data.num,
+        photo: data.photo,
     }
+    console.log(newRes);
+    restaurantData.push(newRes);
     return newRes;
 };
 
@@ -91,10 +98,9 @@ const deleteRestaurant = (id) => {
     if (!resToDelete) {
         throw Error(`Restaurant ${id} not found!`);
     }
-    restaurants = restaurantData.filter(restaurant => restaurant.id !== id);
+    restaurantData = restaurantData.filter(restaurant => restaurant.id !== id);
     return resToDelete;
-
-
 };
 
 export { restaurantData, getRestaurants, getRestaurant, createRestaurant, deleteRestaurant };
+

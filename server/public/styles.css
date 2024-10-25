@@ -101,35 +101,48 @@ a {
 /* Restaurants PAGE */
 
 .restaurants_view {
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin-left: 70px;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     padding: 20px;
-    border-radius: 5px;
+    max-width: 1200px; 
+    margin-left: 15%;
 }
 
 .restaurants-card {
-    padding: 20px;
-    text-align: center;
+    display: inline-block; 
+    flex-direction: row; 
+    align-items: center;
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    gap: 10px;
+    max-width: 500px;
 }
 
 .restaurants-card img {
-    width: 400px;
+    width: 300px;
     height: auto;
+    border-radius: 5px; 
 }
 
-.restaurants-card h3 {
-    color: black;
-    margin: 15px 0 10px;
-    font-size: 35px;
+.text-box {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: left; 
 }
 
-.restaurants-card p {
-    color: black;
-    font-size: 20px;
+.text-box h3 {
+    margin: 0;
+    font-size: 25px; 
+}
+
+.text-box p {
     margin: 5px 0;
+    font-size: 15px; 
 }
+
 
 
 /* Restaurants Form PAGE */
